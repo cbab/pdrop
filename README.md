@@ -7,23 +7,23 @@ The Linux kernel provides a tracepoint named `kfree_skb` that is called when [so
 
 This method of tracking packet drops is currently limited. See the limitations section for more information.
 
-### Requirements
+## Requirements
 
 * Python 3
 * LTTng toolchain >= 2.2
 * Babeltrace git built with Python bindings support (Refer to Babeltrace README to see how bindings can be enabled)
 
-#### Optional
+### Optional
 * iproute2 (Provides the tc command)
 * Network emulator module (sch_netem) (Required to emulate packet drop with the tc command, see [this](http://www.linuxfoundation.org/collaborate/workgroups/networking/netem) article for more information about netem)
 
-### Usage
+## Usage
 
 ````
 $ pdrop.py /path/to/trace
 ````
 
-#### Sample output
+### Sample output
 
 ````
 $ pdrop.py trace/
@@ -44,8 +44,8 @@ $ pdrop.py trace/
 
 Note that the functions symbols are resolved using `/proc/kallsym` on the host where pdrop is runned.
 
-#### Emulating packet drops
+### Emulating packet drops
 
 
 
-### Limitations
+## Limitations
