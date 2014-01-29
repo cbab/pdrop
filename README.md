@@ -40,7 +40,7 @@ $ pdrop.py trace/
 ````
 * The first column indicates the timestamp when the packet drop event occured.
 * The second column indicates the address where the packet was dropped.
-* The third column, if present, indicates the function where the packet was dropped.
+* The third column, if present, indicates the function+offset where the packet was dropped.
 
 Note that the functions symbols are resolved using `/proc/kallsym` on the host where pdrop is runned.
 
