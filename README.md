@@ -3,9 +3,9 @@ pdrop
 
 `pdrop` is a Python script that uses [LTTng](http://www.lttng.org) to analyse packet drops occuring in the Linux kernel network stack.
 
-The Linux kernel provides a tracepoint named `kfree_skb` that is called when [socket buffers](http://vger.kernel.org/~davem/skb.html) (skbs) are freed. By tracking these skbs deallocation, we are able to infer when packet drops occur in the Linux network stack. `pdrop` track the `kfree_skb` events and provide useful information such as when and where a packet drop occured. 
+The Linux kernel provides a tracepoint named `kfree_skb` that is called when [socket buffers](http://vger.kernel.org/~davem/skb.html) (skbs) are freed. By tracking these skbs deallocation, we are able to infer when packet drops occur in the Linux network stack. This method of tracking packet drops is currently limited. See the limitations section for more information.
 
-This method of tracking packet drops is currently limited. See the limitations section for more information.
+`pdrop` track the `kfree_skb` events and provide useful information such as when and where a packet drop occured. 
 
 ## Requirements
 
