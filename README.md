@@ -10,12 +10,12 @@ This method of tracking packet drops is currently limited. See the limitations s
 ## Requirements
 
 * Python 3
-* LTTng toolchain >= 2.2
-* Babeltrace git built with Python bindings support (Refer to Babeltrace README to see how bindings can be enabled)
+* [LTTng](http://www.lttng.org) toolchain >= 2.2
+* [Babeltrace](http://www.efficios.com/babeltrace) git master built with Python bindings support (Refer to Babeltrace [README](http://git.efficios.com/?p=babeltrace.git;a=blob_plain;f=README;hb=HEAD) to see how bindings can be enabled)
 
 ### Optional
-* iproute2 (Provides the tc command)
-* Network emulator module (sch_netem) (Required to emulate packet drop with the tc command, see [this](http://www.linuxfoundation.org/collaborate/workgroups/networking/netem) article for more information about netem)
+* [iproute2](http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2) (Provides the tc command)
+* [Network emulator module](http://www.linuxfoundation.org/collaborate/workgroups/networking/netem) (sch_netem) (Required to emulate packet loss with the tc command)
 
 ## Usage
 
