@@ -46,6 +46,9 @@ Note that the functions symbols are resolved using `/proc/kallsym` on the host w
 
 ### Emulating packet drops
 
+The `trace.sh` script can be used to simulate packet drops. This script setups a tracing session using the lttng command-line tools (provided with the lttng-tools package) and enables the `kfree_skb` kernel event. It then proceeds with the simulation of packet drops with the help of the `tc` and the `sch_netem` network emulator module. Note that you must `modprobe sch_netem` before running this script.
 
+When the script is done, you should have trace data available in the folder indicated. You can then proceed with the 
+`pdrop` usage instructions above.
 
 ## Limitations
