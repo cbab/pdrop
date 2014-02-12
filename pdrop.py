@@ -62,7 +62,7 @@ def lookup_symbol(kallsyms, location):
         return (None, 0)
 
 def get_time_string(timestamp):
-    # timestamp must be in ns since Epoch
+    # timestamp must be in ns since UNIX Epoch
     nsec_per_sec = 1000000000
     timestamp_s  = timestamp / nsec_per_sec
     timestamp_ns = timestamp % nsec_per_sec
